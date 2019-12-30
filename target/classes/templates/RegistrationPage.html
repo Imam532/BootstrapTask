@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title> Registration </title>
+</head>
+<body>
+<div style="text-align: center;">
+    <h1>Welcome!</h1>
+</div>
+<div align="center">
+    <h4>User</h4>
+    <form method="post" th:action="@{/registration}" modelAttribute="user">
+        <table style="with: 80%">
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name"  placeholder="name" required/></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password"  placeholder="password" required/></td>
+            </tr>
+            <tr>
+                <td>Role</td>
+                <td><input type="text" READONLY name="role" value="USER"/>USER</td>
+            </tr>
+        </table>
+        <input type="submit" value="JOIN"/>
+    </form>
+</div>
+<div align="center">
+    <td><input type="button" value="CANCEL" onclick="window.location.href='../../../test'" /></td>
+</div>
+</body>
+</html>
